@@ -1,8 +1,7 @@
 {
-<<<<<<< HEAD
   "name": "campus-complaint-demo",
   "version": "1.0.0",
-  "description": "Campus Complaint Management System - Demo Version",
+  "description": "Campus Complaint Management System - Frontend Demo",
   "main": "frontend/login.html",
   "scripts": {
     "start": "serve frontend",
@@ -11,24 +10,5 @@
   "dependencies": {},
   "devDependencies": {
     "serve": "^14.2.0"
-=======
-  "name": "campus_complaint",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "body-parser": "^2.2.2",
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "mysql": "^2.18.1",
-    "mysql2": "^3.19.1"
->>>>>>> b9243f31284ab96a981190766ab154bc9a4c08a4
   }
 }
