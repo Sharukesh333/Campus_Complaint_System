@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Complaint - Campus Complaint System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="hidden" id="complaint-page-marker">
+
+  <!-- Mobile Header -->
+  <div id="mobile-header-container"></div>
+
+  <div class="app-container">
+    <!-- Sidebar Area -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header Area (Welcome Banner) -->
+      <div id="header-container"></div>
+
+      <!-- Add Complaint Form Card -->
+      <div class="card" style="max-width: 700px; margin: 0 auto 30px auto;">
+        <h2 class="card-title"><i class="fa-solid fa-circle-plus" style="color: var(--primary);"></i> Submit a New Complaint</h2>
+        
+        <div class="form-group">
+          <label for="title">Complaint Title</label>
+          <input type="text" id="title" placeholder="e.g. Library WiFi Issue or Broken Projector" required>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Detailed Description</label>
+          <textarea id="description" placeholder="Please provide specific details about the issue so we can investigate it..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location / Room Number</label>
+          <input type="text" id="location" placeholder="e.g. Block A, Room 302 or Main Canteen" required>
+        </div>
+
+        <div class="form-group">
+          <label for="priority">Priority Level</label>
+          <select id="priority">
+            <option value="Low">Low (General Feedback)</option>
+            <option value="Medium" selected>Medium (Standard Issue)</option>
+            <option value="High">High (Urgent Maintenance Required)</option>
+          </select>
+        </div>
+
+        <button onclick="submitComplaint()"><i class="fa-solid fa-paper-plane"></i> Submit Complaint</button>
+      </div>
+
+      <!-- Footer Area -->
+      <div id="footer-container"></div>
+    </main>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>

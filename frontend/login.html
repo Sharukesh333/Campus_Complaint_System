@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Campus Complaint System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <input type="hidden" id="login-page-marker">
+
+  <div class="auth-card">
+    <div class="welcome-logo">
+      <i class="fa-solid fa-building-columns"></i>
+    </div>
+    <h2>Campus Care</h2>
+    <p>Campus Complaint Management System - Demo Version</p>
+
+    <div class="form-group">
+      <label for="login_id">Register Number or Email</label>
+      <input type="text" id="login_id" placeholder="e.g. student@college.com or STUDENT01" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="••••••••" required>
+    </div>
+
+    <div class="form-group">
+      <label for="role">Select Login Role</label>
+      <select id="role">
+        <option value="Student">Student</option>
+        <option value="Admin">Admin</option>
+      </select>
+    </div>
+
+    <button onclick="login()"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+
+    <div style="margin-top: 25px; font-size: 0.9rem;">
+      <span style="color: var(--text-muted);">Don't have an account?</span>
+      <a href="signup.html" style="color: var(--primary); text-decoration: none; font-weight: 600; margin-left: 5px;">Create Account</a>
+    </div>
+
+    <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid var(--card-border); font-size: 0.8rem; color: var(--text-muted);">
+      <p><strong>Demo Accounts:</strong></p>
+      <p style="margin-top: 5px;">Student: student@college.com / student123</p>
+      <p>Admin: admin@college.com / admin123</p>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>

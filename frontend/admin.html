@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Campus Complaint System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="hidden" id="admin-page-marker">
+
+  <!-- Mobile Header -->
+  <div id="mobile-header-container"></div>
+
+  <div class="app-container">
+    <!-- Sidebar Area -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header Area (Welcome Banner) -->
+      <div id="header-container"></div>
+
+      <!-- Admin Panel Card -->
+      <div class="card">
+        <h2 class="card-title"><i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> Admin Control Center</h2>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Student</th>
+                <th>Details</th>
+                <th>Priority</th>
+                <th>Status (Update)</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminTable">
+              <!-- Injected via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Footer Area -->
+      <div id="footer-container"></div>
+    </main>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>

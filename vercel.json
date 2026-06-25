@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "routes": [
+    { "src": "^/$", "dest": "/frontend/login.html" },
+    { "src": "^/(.*)$", "dest": "/frontend/$1" }
+  ]
+}

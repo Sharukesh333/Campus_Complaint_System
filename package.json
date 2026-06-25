@@ -1,0 +1,14 @@
+{
+  "name": "campus-complaint-demo",
+  "version": "1.0.0",
+  "description": "Campus Complaint Management System - Demo Version",
+  "main": "frontend/login.html",
+  "scripts": {
+    "start": "serve frontend",
+    "dev": "serve frontend"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

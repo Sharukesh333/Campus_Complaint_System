@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Complaints - Campus Complaint System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="hidden" id="mycomplaints-page-marker">
+
+  <!-- Mobile Header -->
+  <div id="mobile-header-container"></div>
+
+  <div class="app-container">
+    <!-- Sidebar Area -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header Area (Welcome Banner) -->
+      <div id="header-container"></div>
+
+      <!-- Complaints List Card -->
+      <div class="card">
+        <h2 class="card-title"><i class="fa-solid fa-list-check" style="color: var(--primary);"></i> My Registered Complaints</h2>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Complaint ID</th>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="table">
+              <!-- Injected via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Footer Area -->
+      <div id="footer-container"></div>
+    </main>
+  </div>
+
+  <!-- Edit Complaint Modal Overlay -->
+  <div class="modal-overlay" id="edit-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fa-solid fa-pen-to-square" style="color: var(--primary);"></i> Edit Complaint</h3>
+        <button class="modal-close" onclick="closeEditModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="form-group">
+        <label for="edit-title">Complaint Title</label>
+        <input type="text" id="edit-title" placeholder="e.g. WiFi issue">
+      </div>
+
+      <div class="form-group">
+        <label for="edit-description">Description</label>
+        <textarea id="edit-description" placeholder="Provide detailed information..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="edit-location">Location / Room Number</label>
+        <input type="text" id="edit-location" placeholder="e.g. Block A">
+      </div>
+
+      <div class="form-group">
+        <label for="edit-priority">Priority Level</label>
+        <select id="edit-priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-secondary" onclick="closeEditModal()" style="width: auto;">Cancel</button>
+        <button onclick="saveComplaintEdits()" style="width: auto; margin-top: 0; margin-left: auto;">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Campus Complaint System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <input type="hidden" id="dashboard-page-marker">
+
+  <!-- Mobile Header -->
+  <div id="mobile-header-container"></div>
+
+  <div class="app-container">
+    <!-- Sidebar Area -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header Area (Welcome Banner) -->
+      <div id="header-container"></div>
+
+      <!-- Stats Cards Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-info">
+            <h3>Total Complaints</h3>
+            <p id="stat-total">0</p>
+          </div>
+          <div class="stat-icon total">
+            <i class="fa-solid fa-folder-open"></i>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-info">
+            <h3>Pending</h3>
+            <p id="stat-pending">0</p>
+          </div>
+          <div class="stat-icon pending">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-info">
+            <h3>In Progress</h3>
+            <p id="stat-progress">0</p>
+          </div>
+          <div class="stat-icon progress">
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-info">
+            <h3>Resolved</h3>
+            <p id="stat-resolved">0</p>
+          </div>
+          <div class="stat-icon resolved">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Cards Grid -->
+      <div class="dashboard-grid">
+        <!-- Recent Complaints Card -->
+        <div class="card" style="margin-bottom: 0;">
+          <h2 class="card-title"><i class="fa-solid fa-receipt" style="color: var(--primary);"></i> Recent Complaints</h2>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Title</th>
+                  <th>Status</th>
+                  <th>Priority</th>
+                </tr>
+              </thead>
+              <tbody id="recentTable">
+                <!-- Injected via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Chart.js Distribution Card -->
+        <div class="card" style="margin-bottom: 0; display: flex; flex-direction: column;">
+          <h2 class="card-title"><i class="fa-solid fa-chart-pie" style="color: var(--secondary);"></i> Distribution</h2>
+          <div style="flex: 1; min-height: 220px; position: relative;">
+            <canvas id="statusChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Area -->
+      <div id="footer-container"></div>
+    </main>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
