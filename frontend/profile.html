@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <input type="hidden" id="profile-page-marker">
 
@@ -24,15 +26,17 @@
 
       <!-- Profile Workspace Grid -->
       <div class="profile-grid">
-        
+
         <!-- Left Column: User Summary Card -->
         <div class="card profile-sidebar">
           <div class="user-avatar profile-avatar" id="p-initials">--</div>
           <h2 style="font-size: 1.4rem; margin-top: 10px;" id="p-name">Loading User...</h2>
           <p style="color: var(--text-muted); font-size: 0.9rem; font-weight: 500;" id="p-role">ROLE</p>
-          
+
           <div style="width: 100%; margin-top: 30px; text-align: left;">
-            <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; font-weight: 600; border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">Quick Actions</p>
+            <p
+              style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; font-weight: 600; border-bottom: 1px solid var(--card-border); padding-bottom: 8px;">
+              Quick Actions</p>
             <button class="btn btn-secondary btn-sm" onclick="logout()" style="width: 100%; margin-top: 15px;">
               <i class="fa-solid fa-right-from-bracket"></i> Sign Out
             </button>
@@ -41,11 +45,12 @@
 
         <!-- Right Column: User Details and Password Management -->
         <div style="display: flex; flex-direction: column; gap: 30px;">
-          
+
           <!-- Personal Information Card -->
           <div class="card" style="margin-bottom: 0;">
-            <h2 class="card-title"><i class="fa-solid fa-address-card" style="color: var(--primary);"></i> Personal Information</h2>
-            
+            <h2 class="card-title"><i class="fa-solid fa-address-card" style="color: var(--primary);"></i> Personal
+              Information</h2>
+
             <div class="profile-info-grid">
               <div class="profile-item">
                 <div class="profile-item-label">Full Name</div>
@@ -77,7 +82,7 @@
           <!-- Change Password Card -->
           <div class="card" style="margin-bottom: 0;">
             <h2 class="card-title"><i class="fa-solid fa-key" style="color: var(--secondary);"></i> Update Password</h2>
-            
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
               <div class="form-group" style="margin-bottom: 0;">
                 <label for="old-password">Current Password</label>
@@ -92,7 +97,7 @@
                 <input type="password" id="confirm-password" placeholder="••••••••" required>
               </div>
             </div>
-            
+
             <button onclick="updatePassword()" style="width: auto; margin-top: 25px; float: right;">
               <i class="fa-solid fa-floppy-disk"></i> Save New Password
             </button>
@@ -103,11 +108,12 @@
       </div>
 
       <!-- Footer Area -->
-      <div id="footer-container"></div>
+      <!-- <div id="footer-container"></div> -->
     </main>
   </div>
 
   <div id="toast-container"></div>
   <script src="script.js"></script>
 </body>
+
 </html>
