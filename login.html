@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="auth-page">
   <input type="hidden" id="login-page-marker">
 
@@ -15,11 +17,11 @@
       <i class="fa-solid fa-building-columns"></i>
     </div>
     <h2>Campus Care</h2>
-    <p>Campus Complaint Management System - Demo Version</p>
+    <p>Campus Complaint Management System</p>
 
     <div class="form-group">
       <label for="login_id">Register Number or Email</label>
-      <input type="text" id="login_id" placeholder="e.g. student@college.com or STUDENT01" required>
+      <input type="text" id="login_id" placeholder="use any of the demo accounts given below" required>
     </div>
 
     <div class="form-group">
@@ -39,22 +41,30 @@
 
     <div style="margin-top: 25px; font-size: 0.9rem;">
       <span style="color: var(--text-muted);">Don't have an account?</span>
-      <a href="/signup" style="color: var(--primary); text-decoration: none; font-weight: 600; margin-left: 5px;">Create Account</a>
+      <a href="/signup" style="color: var(--primary); text-decoration: none; font-weight: 600; margin-left: 5px;">Create
+        Account</a>
     </div>
 
     <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--card-border);">
-      <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-bottom: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">⚡ Quick Demo Login</p>
+      <p
+        style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-bottom: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+        ⚡ Quick Demo Login</p>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <button onclick="demoLogin('Student')" type="button" style="background: linear-gradient(135deg, #3b82f6, #06b6d4); font-size: 0.82rem; padding: 10px 8px; margin-top: 0;">
+        <button onclick="demoLogin('Student')" type="button"
+          style="background: linear-gradient(135deg, #3b82f6, #06b6d4); font-size: 0.82rem; padding: 10px 8px; margin-top: 0;">
           <i class="fa-solid fa-graduation-cap"></i> Student Demo
         </button>
-        <button onclick="demoLogin('Admin')" type="button" style="background: linear-gradient(135deg, #8b5cf6, #ec4899); font-size: 0.82rem; padding: 10px 8px; margin-top: 0;">
+        <button onclick="demoLogin('Admin')" type="button"
+          style="background: linear-gradient(135deg, #8b5cf6, #ec4899); font-size: 0.82rem; padding: 10px 8px; margin-top: 0;">
           <i class="fa-solid fa-shield-halved"></i> Admin Demo
         </button>
       </div>
-      <div style="margin-top: 12px; background: rgba(79,70,229,0.06); border-radius: 10px; padding: 10px 14px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.7;">
-        <div><i class="fa-solid fa-user" style="width:14px; color: #3b82f6;"></i> <b>Student:</b> student@college.com / student123</div>
-        <div><i class="fa-solid fa-shield-halved" style="width:14px; color: #8b5cf6;"></i> <b>Admin:</b> admin@college.com / admin123</div>
+      <div
+        style="margin-top: 12px; background: rgba(79,70,229,0.06); border-radius: 10px; padding: 10px 14px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.7;">
+        <div><i class="fa-solid fa-user" style="width:14px; color: #3b82f6;"></i> <b>Student:</b> student@college.com /
+          student123</div>
+        <div><i class="fa-solid fa-shield-halved" style="width:14px; color: #8b5cf6;"></i> <b>Admin:</b>
+          admin@college.com / admin123</div>
       </div>
     </div>
   </div>
@@ -62,4 +72,5 @@
   <div id="toast-container"></div>
   <script src="script.js"></script>
 </body>
-</html>
+
+</html>
