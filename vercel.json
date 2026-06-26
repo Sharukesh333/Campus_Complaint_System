@@ -1,5 +1,7 @@
 {
   "outputDirectory": "frontend",
+  "installCommand": "",
+  "buildCommand": "",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
