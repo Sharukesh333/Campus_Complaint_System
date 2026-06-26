@@ -156,15 +156,15 @@ function checkSession() {
   const isAuthPage = path.includes("login") || path.includes("signup") || path.includes("index") || path === "/" || path.endsWith("/frontend") || path.endsWith("/frontend/");
 
   if (!user && !isAuthPage) {
-    window.location.href = "/login";
+    window.location.href = "login.html";
     return null;
   }
 
   if (user && isAuthPage) {
     if (user.role === "Admin") {
-      window.location.href = "/admin";
+      window.location.href = "admin.html";
     } else {
-      window.location.href = "/dashboard";
+      window.location.href = "dashboard.html";
     }
     return user;
   }
@@ -172,10 +172,10 @@ function checkSession() {
   // Role routing enforcement
   if (user && !isAuthPage) {
     if (user.role === "Admin" && (path.includes("complaint") || path.includes("mycomplaints"))) {
-      window.location.href = "/admin";
+      window.location.href = "admin.html";
     }
     if (user.role !== "Admin" && path.includes("admin")) {
-      window.location.href = "/dashboard";
+      window.location.href = "dashboard.html";
     }
   }
 
@@ -236,7 +236,7 @@ function signup() {
   showToast("Signup Successful! Redirecting to login...", "success");
 
   setTimeout(() => {
-    window.location.href = "/login";
+    window.location.href = "login.html";
   }, 1500);
 }
 
@@ -268,9 +268,9 @@ function login() {
 
   setTimeout(() => {
     if (role === "Admin") {
-      window.location.href = "/admin";
+      window.location.href = "admin.html";
     } else {
-      window.location.href = "/dashboard";
+      window.location.href = "dashboard.html";
     }
   }, 1000);
 }
@@ -279,7 +279,7 @@ function logout() {
   localStorage.removeItem("ccs_current_user");
   showToast("Logged out successfully.", "info");
   setTimeout(() => {
-    window.location.href = "/login";
+    window.location.href = "login.html";
   }, 800);
 }
 
@@ -295,30 +295,30 @@ function loadCommonLayout(currentPage) {
     // Build menu items based on role
     let menuItems = `
       <li class="nav-item ${currentPage === 'dashboard' ? 'active' : ''}">
-        <a href="/dashboard"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
+        <a href="dashboard.html"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a>
       </li>
     `;
 
     if (currentUser.role === "Admin") {
       menuItems += `
         <li class="nav-item ${currentPage === 'admin' ? 'active' : ''}">
-          <a href="/admin"><i class="fa-solid fa-shield-halved"></i><span>Admin Panel</span></a>
+          <a href="admin.html"><i class="fa-solid fa-shield-halved"></i><span>Admin Panel</span></a>
         </li>
       `;
     } else {
       menuItems += `
         <li class="nav-item ${currentPage === 'submit' ? 'active' : ''}">
-          <a href="/complaint"><i class="fa-solid fa-circle-plus"></i><span>Submit Complaint</span></a>
+          <a href="complaint.html"><i class="fa-solid fa-circle-plus"></i><span>Submit Complaint</span></a>
         </li>
         <li class="nav-item ${currentPage === 'mycomplaints' ? 'active' : ''}">
-          <a href="/mycomplaints"><i class="fa-solid fa-list-check"></i><span>My Complaints</span></a>
+          <a href="mycomplaints.html"><i class="fa-solid fa-list-check"></i><span>My Complaints</span></a>
         </li>
       `;
     }
 
     menuItems += `
       <li class="nav-item ${currentPage === 'profile' ? 'active' : ''}">
-        <a href="/profile"><i class="fa-solid fa-user-gear"></i><span>Profile</span></a>
+        <a href="profile.html"><i class="fa-solid fa-user-gear"></i><span>Profile</span></a>
       </li>
       <li class="nav-item">
         <a href="#" onclick="logout(); return false;"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
